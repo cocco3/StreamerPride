@@ -1,12 +1,26 @@
 import React from "react"
+import { css } from "@emotion/core"
 
 import HeaderNav from '../HeaderNav'
+import logo from './logo.png'
 
 function AppHeader() {
-  return (
-    <header>
+  const headerStyles = css`
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  `
 
-      <img src="Reg3.png" />
+  const imgStyles = css`
+    height: 50px;
+    margin: 0;
+  `
+
+  return (
+    <header css={headerStyles}>
+
+      <img css={imgStyles} src={logo} />
       
       <HeaderNav
         items={[

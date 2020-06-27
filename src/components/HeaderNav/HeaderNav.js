@@ -1,30 +1,41 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { css } from "@emotion/core"
 
-import { Link } from "gatsby"
+import HeaderNavItem from '../HeaderNavItem'
 
-function HeaderNav(props) {
-  const {
-    items
-  } = props
+function HeaderNav({ items }) {
+
+  const ulStyles = css`
+    display: flex;
+    margin: 0;
+    padding: 0;
+  `
+
+  const liStyles = css`
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    & + li {
+      margin-left: 24px;
+    }
+  `
 
   const ItemsNode = items.map((value, index) => {
     return (
-      <li className="nav_listItem" key={index}>
-        <Link
+      <li css={liStyles} key={index}>
+        <HeaderNavItem
+          text={value.text}
           to={value.to}
-          className="nav_item"
-          activeClassName="nav_item-active"
-        >
-          {value.text}
-        </Link>
+        />
       </li>
     )
   })
 
   return (
-    <nav className="nav">
-      <ul className="nav_list">
+    <nav>
+      <ul css={ulStyles}>
         {ItemsNode}
       </ul>
     </nav>
