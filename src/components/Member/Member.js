@@ -5,26 +5,58 @@ import { css } from "@emotion/core"
 function Member({
   name,
   pronouns,
-  description
+  description,
+  twitchUrl,
+  twitterUrl
  }) {
 
   const headingStyles = css`
     border-bottom: 1px solid white;
   `
 
+  const TwitterNode = twitterUrl && (
+    <div>
+      <a
+        href={twitterUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Twitter
+      </a>
+    </div>
+  )
+
   return (
     <div>
-      <div>{name}</div>
-      <div css={headingStyles}>{pronouns}</div>
-      <div>{description}</div>
+      <div>
+        <a
+          href={twitchUrl}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {name}
+        </a>
+      </div>
+
+      <div css={headingStyles}>
+        {pronouns}
+      </div>
+      
+      <div>
+        {description}
+      </div>
+
+      {TwitterNode}
     </div>
   )
 }
 
 Member.propTypes = {
+  description: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   pronouns: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  twitchUrl: PropTypes.string.isRequired,
+  twitterUrl: PropTypes.string
 }
 
 export default Member
