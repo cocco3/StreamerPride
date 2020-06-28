@@ -2,8 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import { Layout } from "../components"
-import SEO from "../components/seo"
+import { Layout, SEO } from "../components"
 import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {

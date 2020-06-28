@@ -6,6 +6,11 @@ import { Link } from "gatsby"
 
 function HeaderNavItem({ text, to }) {
 
+  const activeStyles = `
+    box-shadow: 0 1px 0 0 currentColor;
+    color: white;
+  `
+
   const linkStyles = `
     box-shadow: none;
     color: rgba(255, 255, 255, 0.75);
@@ -16,8 +21,7 @@ function HeaderNavItem({ text, to }) {
     transition-timing-function: ease;
 
     &:hover {
-      box-shadow: 0 1px 0 0 currentColor;
-      color: white;
+      ${activeStyles}
     }
   `
 
@@ -27,7 +31,7 @@ function HeaderNavItem({ text, to }) {
         <Link
           to={to}
           className={css(linkStyles)}
-          activeClassName={css`text-decoration-style: double;`}
+          activeClassName={css(activeStyles)}
         >
           {text}
         </Link>

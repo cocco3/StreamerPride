@@ -1,10 +1,11 @@
 import React from "react"
 
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
 
 const Contact = () => {
   return (
     <Layout>
+      <SEO title="Contact" />
       Contact
     </Layout>
   )

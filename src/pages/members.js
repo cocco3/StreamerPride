@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import { Heading, Layout, Member } from "../components"
+import { Heading, Layout, Member, SEO } from "../components"
 
 import membersData from '../data/members'
 
@@ -33,6 +33,7 @@ const Members = ({ data, location }) => {
 
   return (
     <Layout>
+      <SEO title="Members" />
       <Heading level={1}>Our Members</Heading>
 
       <Heading level={2}>Founders</Heading>
