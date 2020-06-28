@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { css } from "@emotion/core"
 
 function Member({
+  image,
   name,
   pronouns,
   description,
@@ -29,6 +30,7 @@ function Member({
   return (
     <div>
       <div>
+        {image}
         <a
           href={twitchUrl}
           rel="noopener noreferrer"
@@ -41,7 +43,7 @@ function Member({
       <div css={headingStyles}>
         {pronouns}
       </div>
-      
+
       <div>
         {description}
       </div>
@@ -53,6 +55,7 @@ function Member({
 
 Member.propTypes = {
   description: PropTypes.string.isRequired,
+  image: PropTypes.node,
   name: PropTypes.string.isRequired,
   pronouns: PropTypes.string.isRequired,
   twitchUrl: PropTypes.string.isRequired,
