@@ -27,7 +27,7 @@ function AppHeader() {
           { text: 'Home', to: '/' },
           { text: 'About', to: '/about' },
           { text: 'Members', to: '/members' },
-          { text: 'Layout', to: '/layout' }
+          { text: 'Contact', to: '/contact' }
         ]}
       />
     </header>

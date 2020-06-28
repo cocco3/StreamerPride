@@ -8,14 +8,14 @@ function Member({
   description
  }) {
 
-  const nameStyles = css`
+  const headingStyles = css`
     border-bottom: 1px solid white;
   `
 
   return (
     <div>
-      <div css={nameStyles}>{name}</div>
-      <div>{pronouns}</div>
+      <div>{name}</div>
+      <div css={headingStyles}>{pronouns}</div>
       <div>{description}</div>
     </div>
   )

@@ -5,7 +5,7 @@ import { Layout } from "../components"
 const About = () => {
   return (
     <Layout>
-      Contact
+      About
     </Layout>
   )
 }
