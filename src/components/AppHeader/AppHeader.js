@@ -1,8 +1,8 @@
 import React from "react"
 import { css } from "@emotion/core"
 
+import HeaderLogo from '../HeaderLogo'
 import HeaderNav from '../HeaderNav'
-import logo from './logo.png'
 
 function AppHeader() {
   const headerStyles = css`
@@ -12,15 +12,10 @@ function AppHeader() {
     justify-content: space-between;
   `
 
-  const imgStyles = css`
-    height: 50px;
-    margin: 0;
-  `
-
   return (
     <header css={headerStyles}>
 
-      <img css={imgStyles} src={logo} />
+      <HeaderLogo />
       
       <HeaderNav
         items={[

@@ -20,7 +20,7 @@ function AppFooter() {
 
   return (
     <footer css={footerStyles}>
-      <img css={imgStyles} src={logo} />
+      <img css={imgStyles} src={logo} alt="StreamerPride logo" aria-hidden="true" />
       <div>
         Standing together to support LGBTQ+ streamers worldwide
       </div>
