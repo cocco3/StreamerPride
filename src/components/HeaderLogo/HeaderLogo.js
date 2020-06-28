@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
 
-import logo from './logo.png'
+import logo from '../../../content/assets/logo.png'
 
 import { visuallyHidden } from '../../utils/styles'
 

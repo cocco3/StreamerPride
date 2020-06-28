@@ -12,7 +12,9 @@ function Member({
  }) {
 
   const headingStyles = css`
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
   `
 
   const TwitterNode = twitterUrl && (
@@ -29,18 +31,19 @@ function Member({
 
   return (
     <div>
-      <div>
-        {image}
-        <a
-          href={twitchUrl}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          {name}
-        </a>
-      </div>
-
       <div css={headingStyles}>
+        {image}
+
+        <div>
+          <a
+            href={twitchUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {name}
+          </a>
+        </div>
+
         {pronouns}
       </div>
 

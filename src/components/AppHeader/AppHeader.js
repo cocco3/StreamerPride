@@ -12,6 +12,8 @@ function AppHeader() {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 24px;
+    padding-top: 24px;
     ${pageWrap}
   `
 
