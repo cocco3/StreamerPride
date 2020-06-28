@@ -1,6 +1,8 @@
 import React from "react"
 import { css } from "@emotion/core"
 
+import { pageWrap } from '../../utils/styles'
+
 import logo from './logo.png'
 
 function AppFooter() {
@@ -10,7 +12,9 @@ function AppFooter() {
     display: flex;
     color: #ffffff;
     justify-content: space-between;
-    padding: 24px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    ${pageWrap}
   `
 
   const imgStyles = css`

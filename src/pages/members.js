@@ -11,7 +11,7 @@ const Members = ({ data, location }) => {
   const wrapStyles = css`
     display: grid;
     grid-gap: 48px;
-    grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+    grid-template-columns: repeat( auto-fill, minmax(270px, 1fr) );
   `
 
   const MemberNode = (member) => {

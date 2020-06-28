@@ -3,6 +3,7 @@ import { Global, css } from "@emotion/core"
 
 import AppHeader from '../AppHeader'
 import AppFooter from '../AppFooter'
+import AppMain from '../AppMain'
 
 const Layout = ({ children }) => {
 
@@ -41,11 +42,13 @@ const Layout = ({ children }) => {
           <AppHeader />
         </div>
         <div css={mainStyles}>
-          <main>{children}</main>
+          <AppMain>
+            {children}
+          </AppMain>
         </div>
         <div css={footerStyles}>
           <AppFooter />
-        </div>        
+        </div>
       </div>
     </>
   )

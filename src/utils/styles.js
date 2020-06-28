@@ -9,3 +9,9 @@ export const visuallyHidden = `
   white-space: nowrap;
   width: 1px;
 `
+
+export const pageWrap = `
+  max-width: 1440px;
+  padding-left: 100px;
+  padding-right: 100px;
+`
