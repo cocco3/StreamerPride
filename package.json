@@ -1,11 +1,16 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "@cocco3/streamer-pride",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Front-end for the StreamPride Network site.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Joe Cocco <cocco3@gmail.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/cocco3/StreamerPride/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cocco3/StreamerPride.git"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -42,18 +47,8 @@
   "devDependencies": {
     "prettier": "2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
