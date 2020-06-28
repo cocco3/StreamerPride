@@ -18,7 +18,7 @@ function HeaderNav({ items }) {
     padding: 0;
 
     & + li {
-      margin-left: 24px;
+      margin-left: 48px;
     }
   `
 

@@ -32,6 +32,7 @@ const Layout = ({ children }) => {
           body {
             background-color: #39318a;
             color: white;
+            font-family: Roboto, "system-ui";
           }
         `}
       />
