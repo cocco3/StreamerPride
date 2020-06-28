@@ -1,3 +1,5 @@
 export { default as AppHeader } from './AppHeader'
 export { default as AppFooter } from './AppFooter'
 export { default as HeaderNav } from './HeaderNav'
+export { default as Layout } from './Layout'
+export { default as Member } from './Member'
