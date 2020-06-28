@@ -1,42 +1,40 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import { css } from "@emotion/core"
 
-import { Layout, SEO } from "../components"
-import { rhythm } from "../utils/typography"
+import { BlogCard, Layout, SEO } from "../components"
 
 const BlogIndex = ({ data, location }) => {
   // const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
+  const wrapStyles = css`
+    display: grid;
+    grid-gap: 48px;
+    grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+  `
+
+  const PostsNode = posts.map(({ node }) => {
+    const excerpt = node.frontmatter.description || node.excerpt
+    const title = node.frontmatter.title || node.fields.slug
+
+    return (
+      <BlogCard
+        key={node.fields.slug}
+        date={node.frontmatter.date}
+        excerpt={excerpt}
+        title={title}
+        to={node.fields.slug}
+      />
+    )
+  })
+
   return (
     <Layout>
       <SEO title="Home" />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
+      <div css={wrapStyles}>
+        {PostsNode}
+      </div>
     </Layout>
   )
 }
