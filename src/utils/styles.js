@@ -12,6 +12,6 @@ export const visuallyHidden = `
 
 export const pageWrap = `
   max-width: 1440px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: clamp(12px, 5vw, 100px);
+  padding-right: clamp(12px, 5vw, 100px);
 `

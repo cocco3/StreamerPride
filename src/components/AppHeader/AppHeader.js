@@ -7,6 +7,10 @@ import HeaderNav from '../HeaderNav'
 import { pageWrap } from '../../utils/styles'
 
 function AppHeader() {
+  const logoStyles = css`
+    flex: 0 0 auto;
+  `
+
   const headerStyles = css`
     align-items: center;
     display: flex;
@@ -19,7 +23,9 @@ function AppHeader() {
 
   return (
     <header css={headerStyles}>
-      <HeaderLogo />
+      <div css={logoStyles}>
+        <HeaderLogo />
+      </div>
 
       <HeaderNav
         items={[
