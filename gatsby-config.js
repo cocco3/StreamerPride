@@ -3,13 +3,12 @@ module.exports = {
   siteMetadata: {
     title: `StreamerPride Network`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Kevin August`
     },
     description: `Supporting LGBTQ+ Streamers.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://streamerpride.network/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `captain_fel`,
     },
   },
   plugins: [
