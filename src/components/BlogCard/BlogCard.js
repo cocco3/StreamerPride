@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
+import Heading from "../Heading"
+
 function BlogCard({
   date,
   excerpt,
@@ -12,6 +14,7 @@ function BlogCard({
 
   const wrapStyles = css`
     background: #ffffff;
+    border-radius: 2px;
     color: #303030;
     padding: 16px;
   `
@@ -19,11 +22,11 @@ function BlogCard({
   return (
     <article css={wrapStyles}>
       <header>
-        <h3>
+        <Heading level={3}>
           <Link to={to}>
             {title}
           </Link>
-        </h3>
+        </Heading>
       </header>
       <section>
         <p

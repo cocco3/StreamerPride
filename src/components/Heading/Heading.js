@@ -8,9 +8,12 @@ function Heading({ level, children }) {
   switch(level) {
     case 1:
       fontSize = '2.6rem'
-      break
+      break;
     case 2:
       fontSize = '1.6rem'
+      break;
+    case 2:
+      fontSize = '1.3rem'
       break;
     default:
       fontSize = '1rem'
