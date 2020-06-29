@@ -35,7 +35,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout>
       <SEO title="Home" />
       <Hero
-        image={(<img src={logo} />)}
+        image={(<img src={logo} alt="StreamerPride logo" aria-hidden="true" />)}
         text="Standing together to support LGBTQ+ streamers worldwide"
       />
       <Heading level={1}>What's on Deck</Heading>

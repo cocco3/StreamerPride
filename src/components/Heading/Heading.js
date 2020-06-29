@@ -12,7 +12,7 @@ function Heading({ level, children }) {
     case 2:
       fontSize = '1.6rem'
       break;
-    case 2:
+    case 3:
       fontSize = '1.3rem'
       break;
     default:
