@@ -11,6 +11,7 @@ function AppFooter() {
     background-color: #000000;
     display: flex;
     color: #ffffff;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 24px;
     padding-top: 24px;
@@ -29,6 +30,7 @@ function AppFooter() {
     line-height: 1.6;
     letter-spacing: 2px;
     max-width: 400px;
+    padding: 12px 0;
   `
 
   return (
