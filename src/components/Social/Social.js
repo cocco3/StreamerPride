@@ -4,6 +4,7 @@ import { css } from "@emotion/core"
 
 import ScreenReaderText from '../ScreenReaderText'
 
+/* icons from https://simpleicons.org */
 import SvgDiscord from './discord.inline.svg'
 import SvgEmail from './email.inline.svg'
 import SvgTwitter from './twitter.inline.svg'
