@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { css } from "@emotion/core"
+import { css } from '@emotion/core'
 
-import { BlogCard, Heading, Hero, Layout, SEO } from "../components"
+import { BlogCard, Heading, Hero, Layout, SEO } from '../components'
 
 import logo from '../components/AppFooter/logo.png'
 
@@ -14,7 +14,7 @@ const BlogIndex = ({ data, location }) => {
   const wrapStyles = css`
     display: grid;
     grid-gap: 48px;
-    grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   `
 
   const PostsNode = posts.map(({ node }) => {
@@ -22,9 +22,7 @@ const BlogIndex = ({ data, location }) => {
     const title = node.frontmatter.title || node.fields.slug
 
     const fluidImage = node.frontmatter.featuredImage?.childImageSharp.fluid
-    const ImageNode = fluidImage && (
-      <Img fluid={fluidImage} />
-    )
+    const ImageNode = fluidImage && <Img fluid={fluidImage} />
 
     return (
       <BlogCard
@@ -42,13 +40,11 @@ const BlogIndex = ({ data, location }) => {
     <Layout>
       <SEO title="Home" />
       <Hero
-        image={(<img src={logo} alt="StreamerPride logo" aria-hidden="true" />)}
+        image={<img src={logo} alt="StreamerPride logo" aria-hidden="true" />}
         text="Standing together to support LGBTQ+ streamers worldwide"
       />
       <Heading level={1}>What's on Deck</Heading>
-      <div css={wrapStyles}>
-        {PostsNode}
-      </div>
+      <div css={wrapStyles}>{PostsNode}</div>
     </Layout>
   )
 }

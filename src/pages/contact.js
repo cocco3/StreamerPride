@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-import { Heading, Layout, SEO, Social } from "../components"
+import { Heading, Layout, SEO, Social } from '../components'
 
 const Contact = () => {
   return (
@@ -13,7 +13,6 @@ const Contact = () => {
         email="mailto:info@steamerpride.network"
         twitter="https://twitter.com/StreamerPride"
       />
-
     </Layout>
   )
 }

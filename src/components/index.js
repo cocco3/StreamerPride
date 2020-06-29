@@ -1,7 +1,7 @@
 export { default as AppHeader } from './AppHeader'
 export { default as AppFooter } from './AppFooter'
 export { default as BlogCard } from './BlogCard'
-export { default as HeaderLogo} from './HeaderLogo'
+export { default as HeaderLogo } from './HeaderLogo'
 export { default as HeaderNav } from './HeaderNav'
 export { default as Heading } from './Heading'
 export { default as Hero } from './Hero'

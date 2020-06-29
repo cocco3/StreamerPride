@@ -1,21 +1,20 @@
-import React from "react"
+import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { css } from "@emotion/core"
+import { css } from '@emotion/core'
 
-import { Heading, Layout, Member, SEO } from "../components"
+import { Heading, Layout, Member, SEO } from '../components'
 import membersData from '../data/members'
 import getImageFromResults from '../utils/getImageFromResults'
 
 const Members = ({ data, location }) => {
-
   const wrapStyles = css`
     display: grid;
     grid-gap: 48px;
-    grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   `
 
-  const MemberNode = (member) => {
+  const MemberNode = member => {
     const fluidImage = getImageFromResults(data.memberImages, member.name)
 
     const ImageNode = fluidImage && (
@@ -35,13 +34,9 @@ const Members = ({ data, location }) => {
     )
   }
 
-  const FoundersNode = membersData
-    .filter(x => x.founder)
-    .map(MemberNode)
+  const FoundersNode = membersData.filter(x => x.founder).map(MemberNode)
 
-  const MembersNode = membersData
-    .filter(x => !x.founder)
-    .map(MemberNode)
+  const MembersNode = membersData.filter(x => !x.founder).map(MemberNode)
 
   return (
     <Layout>
@@ -49,14 +44,10 @@ const Members = ({ data, location }) => {
       <Heading level={1}>Our Members</Heading>
 
       <Heading level={2}>Founders</Heading>
-      <div css={wrapStyles}>
-        {FoundersNode}
-      </div>
+      <div css={wrapStyles}>{FoundersNode}</div>
 
       <Heading level={2}>Members</Heading>
-      <div css={wrapStyles}>
-        {MembersNode}
-      </div>
+      <div css={wrapStyles}>{MembersNode}</div>
     </Layout>
   )
 }
@@ -65,12 +56,12 @@ export default Members
 
 export const pageQuery = graphql`
   query {
-    memberImages: allFile(filter: {absolutePath: {regex: "/members/"}}) {
+    memberImages: allFile(filter: { absolutePath: { regex: "/members/" } }) {
       edges {
         node {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid,
+              ...GatsbyImageSharpFluid
               originalName
             }
           }

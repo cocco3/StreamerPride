@@ -1,6 +1,6 @@
 ---
 title: Meet StreamerPride Network!
-date: "2020-05-29"
+date: '2020-05-29'
 featuredImage: controller.jpg
 ---
 
@@ -21,8 +21,8 @@ Our first event is a celebratory 10 hour series of live streams showcasing all o
 - 10AM – 12PM: CaptainFel
 - 12PM – 2PM: KayteeKhaos
 - 2PM – 4PM: WillFletchUK
-- 4PM – 6PM:  jygglypuffdaddy
-- 6PM – 8PM: hutchinsane_
+- 4PM – 6PM: jygglypuffdaddy
+- 6PM – 8PM: hutchinsane\_
 
 These streams will happen on each streamer’s personal twitch profiles, refer to the timetable above for more details, and will lead directly into each other. Each streamer will be giving you a hint of what you can usually expect on their channels – a great way to meet our founders!
 

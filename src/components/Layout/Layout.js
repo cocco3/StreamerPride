@@ -1,12 +1,11 @@
-import React from "react"
-import { Global, css } from "@emotion/core"
+import React from 'react'
+import { Global, css } from '@emotion/core'
 
 import AppHeader from '../AppHeader'
 import AppFooter from '../AppFooter'
 import AppMain from '../AppMain'
 
 const Layout = ({ children }) => {
-
   const pageStyles = css`
     display: flex;
     flex-direction: column;
@@ -33,7 +32,7 @@ const Layout = ({ children }) => {
           body {
             background-color: #39318a;
             color: white;
-            font-family: Roboto, "system-ui";
+            font-family: Roboto, 'system-ui';
           }
 
           a {
@@ -42,7 +41,7 @@ const Layout = ({ children }) => {
           }
 
           a:hover {
-            box-shadow: 0 1px 0 0 currentColor
+            box-shadow: 0 1px 0 0 currentColor;
           }
         `}
       />
@@ -51,9 +50,7 @@ const Layout = ({ children }) => {
           <AppHeader />
         </div>
         <div css={mainStyles}>
-          <AppMain>
-            {children}
-          </AppMain>
+          <AppMain>{children}</AppMain>
         </div>
         <div css={footerStyles}>
           <AppFooter />

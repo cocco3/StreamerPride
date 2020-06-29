@@ -1,9 +1,9 @@
 module.exports = {
-  pathPrefix: "/StreamerPride",
+  pathPrefix: '/StreamerPride',
   siteMetadata: {
     title: `StreamerPride Network`,
     author: {
-      name: `Kevin August`
+      name: `Kevin August`,
     },
     description: `Supporting LGBTQ+ Streamers.`,
     siteUrl: `https://streamerpride.network/`,
@@ -81,18 +81,18 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Cabin:700', 'Montserrat:600,700', 'Roboto:400']
-        }
-      }
+          families: ['Cabin:700', 'Montserrat:600,700', 'Roboto:400'],
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /\.inline\.svg$/
-        }
-      }
-    }
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

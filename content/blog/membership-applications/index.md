@@ -1,6 +1,6 @@
 ---
 title: Call for Membership Applications!
-date: "2020-06-04"
+date: '2020-06-04'
 featuredImage: controller.jpg
 ---
 

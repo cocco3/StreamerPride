@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import { css } from '@emotion/core'
 
 function Heading({ image, text }) {
@@ -22,12 +22,8 @@ function Heading({ image, text }) {
 
   return (
     <div css={wrapStyles}>
-      <div css={imgStyles}>
-        {image}
-      </div>
-      <div css={textStyles}>
-        {text}
-      </div>
+      <div css={imgStyles}>{image}</div>
+      <div css={textStyles}>{text}</div>
     </div>
   )
 }

@@ -1,5 +1,5 @@
-import React from "react"
-import { css } from "@emotion/core"
+import React from 'react'
+import { css } from '@emotion/core'
 
 import { pageWrap } from '../../utils/styles'
 
@@ -36,7 +36,12 @@ function AppFooter() {
 
   return (
     <footer css={footerStyles}>
-      <img css={imgStyles} src={logo} alt="StreamerPride logo" aria-hidden="true" />
+      <img
+        css={imgStyles}
+        src={logo}
+        alt="StreamerPride logo"
+        aria-hidden="true"
+      />
       <div css={textStyles}>
         Standing together to support LGBTQ+ streamers worldwide
       </div>

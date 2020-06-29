@@ -1,6 +1,6 @@
 ---
 title: Our Website is LIVE
-date: "2020-05-25"
+date: '2020-05-25'
 featuredImage: ps4-controller.jpeg
 ---
 

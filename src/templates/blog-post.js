@@ -1,19 +1,17 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import Bio from "../components/bio"
-import { Layout, SEO } from "../components"
-import { rhythm, scale } from "../utils/typography"
+import Bio from '../components/bio'
+import { Layout, SEO } from '../components'
+import { rhythm, scale } from '../utils/typography'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { previous, next } = pageContext
 
   const fluidImage = post.frontmatter.featuredImage?.childImageSharp.fluid
-  const ImageNode = fluidImage && (
-    <Img fluid={fluidImage} />
-  )
+  const ImageNode = fluidImage && <Img fluid={fluidImage} />
 
   return (
     <Layout>

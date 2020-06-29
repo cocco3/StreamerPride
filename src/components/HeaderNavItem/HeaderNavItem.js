@@ -1,11 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { ClassNames } from "@emotion/core"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { ClassNames } from '@emotion/core'
 
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 
 function HeaderNavItem({ text, to }) {
-
   const activeStyles = `
     box-shadow: 0 1px 0 0 currentColor;
     color: white;
@@ -42,7 +41,7 @@ function HeaderNavItem({ text, to }) {
 
 HeaderNavItem.propTypes = {
   text: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
 }
 
 export default HeaderNavItem

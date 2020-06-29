@@ -1,6 +1,6 @@
 ---
 title: We Are Looking For Members!
-date: "2020-05-27"
+date: '2020-05-27'
 featuredImage: switch-controllers.jpg
 ---
 

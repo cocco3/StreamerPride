@@ -1,11 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { css } from "@emotion/core"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { css } from '@emotion/core'
 
 import HeaderNavItem from '../HeaderNavItem'
 
 function HeaderNav({ items }) {
-
   const ulStyles = css`
     display: flex;
     margin: 0;
@@ -25,29 +24,24 @@ function HeaderNav({ items }) {
   const ItemsNode = items.map((value, index) => {
     return (
       <li css={liStyles} key={index}>
-        <HeaderNavItem
-          text={value.text}
-          to={value.to}
-        />
+        <HeaderNavItem text={value.text} to={value.to} />
       </li>
     )
   })
 
   return (
     <nav>
-      <ul css={ulStyles}>
-        {ItemsNode}
-      </ul>
+      <ul css={ulStyles}>{ItemsNode}</ul>
     </nav>
   )
 }
 
 HeaderNav.propTypes = {
-  items: PropTypes.array
+  items: PropTypes.array,
 }
 
 HeaderNav.defaultProps = {
-  items: []
+  items: [],
 }
 
 export default HeaderNav

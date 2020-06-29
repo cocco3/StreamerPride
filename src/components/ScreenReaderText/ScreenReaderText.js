@@ -1,9 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { css } from "@emotion/core"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { css } from '@emotion/core'
 
 function ScreenReaderText({ children }) {
-
   const styles = css`
     border: 0;
     clip: rect(0 0 0 0);
@@ -16,15 +15,11 @@ function ScreenReaderText({ children }) {
     width: 1px;
   `
 
-  return (
-    <span css={styles}>
-      {children}
-    </span>
-  )
+  return <span css={styles}>{children}</span>
 }
 
 ScreenReaderText.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 export default ScreenReaderText

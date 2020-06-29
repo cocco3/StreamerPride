@@ -1,5 +1,5 @@
-import React from "react"
-import { css } from "@emotion/core"
+import React from 'react'
+import { css } from '@emotion/core'
 
 import HeaderLogo from '../HeaderLogo'
 import HeaderNav from '../HeaderNav'
@@ -32,7 +32,7 @@ function AppHeader() {
           { text: 'Home', to: '/' },
           { text: 'About', to: '/about' },
           { text: 'Members', to: '/members' },
-          { text: 'Contact', to: '/contact' }
+          { text: 'Contact', to: '/contact' },
         ]}
       />
     </header>

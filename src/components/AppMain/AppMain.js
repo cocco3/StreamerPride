@@ -1,5 +1,5 @@
-import React from "react"
-import { css } from "@emotion/core"
+import React from 'react'
+import { css } from '@emotion/core'
 
 import { pageWrap } from '../../utils/styles'
 
@@ -8,11 +8,7 @@ function AppMain({ children }) {
     ${pageWrap}
   `
 
-  return (
-    <main css={wrapStyles}>
-      {children}
-    </main>
-  )
+  return <main css={wrapStyles}>{children}</main>
 }
 
 export default AppMain

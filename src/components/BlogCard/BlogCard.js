@@ -1,18 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import { css } from "@emotion/core"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import { css } from '@emotion/core'
 
-import Heading from "../Heading"
+import Heading from '../Heading'
 
-function BlogCard({
-  date,
-  excerpt,
-  image,
-  title,
-  to,
- }) {
-
+function BlogCard({ date, excerpt, image, title, to }) {
   const wrapStyles = css`
     background: rgba(255, 255, 255, 0.2);
     border-radius: 2px;
@@ -24,22 +17,20 @@ function BlogCard({
       {image}
       <header>
         <Heading level={3}>
-          <Link to={to}>
-            {title}
-          </Link>
+          <Link to={to}>{title}</Link>
         </Heading>
       </header>
       <section>
         <p
           dangerouslySetInnerHTML={{
-            __html: excerpt
+            __html: excerpt,
           }}
         />
       </section>
       <footer>
         <small>{date}</small>
       </footer>
-  </article>
+    </article>
   )
 }
 
@@ -48,7 +39,7 @@ BlogCard.propTypes = {
   excerpt: PropTypes.node.isRequired,
   image: PropTypes.node,
   title: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
 }
 
 export default BlogCard
