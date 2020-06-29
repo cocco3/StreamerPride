@@ -2,7 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 
-import { BlogCard, Layout, SEO } from "../components"
+import { BlogCard, Heading, Hero, Layout, SEO } from "../components"
+
+import logo from '../components/AppFooter/logo.png'
 
 const BlogIndex = ({ data, location }) => {
   // const siteTitle = data.site.siteMetadata.title
@@ -32,6 +34,11 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout>
       <SEO title="Home" />
+      <Hero
+        image={(<img src={logo} />)}
+        text="Standing together to support LGBTQ+ streamers worldwide"
+      />
+      <Heading level={1}>What's on Deck</Heading>
       <div css={wrapStyles}>
         {PostsNode}
       </div>

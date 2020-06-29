@@ -24,7 +24,6 @@ function BlogCard({
             {title}
           </Link>
         </h3>
-        <small>{date}</small>
       </header>
       <section>
         <p
@@ -33,6 +32,9 @@ function BlogCard({
           }}
         />
       </section>
+      <footer>
+        <small>{date}</small>
+      </footer>
   </article>
   )
 }

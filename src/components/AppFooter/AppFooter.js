@@ -22,10 +22,19 @@ function AppFooter() {
     margin: 0;
   `
 
+  const textStyles = css`
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    max-width: 400px;
+  `
+
   return (
     <footer css={footerStyles}>
       <img css={imgStyles} src={logo} alt="StreamerPride logo" aria-hidden="true" />
-      <div>
+      <div css={textStyles}>
         Standing together to support LGBTQ+ streamers worldwide
       </div>
     </footer>
