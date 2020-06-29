@@ -13,6 +13,7 @@ function AppFooter() {
     color: #ffffff;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 48px;
     padding-bottom: 24px;
     padding-top: 24px;
     ${pageWrap}

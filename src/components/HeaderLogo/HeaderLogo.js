@@ -11,7 +11,10 @@ function HeaderLogo() {
     a {
       display: block;
       box-shadow: none;
-      text-decoration: none;
+
+      &:hover {
+        box-shadow: none;
+      }
     }
 
     img {
