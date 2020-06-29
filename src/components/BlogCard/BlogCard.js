@@ -14,9 +14,8 @@ function BlogCard({
  }) {
 
   const wrapStyles = css`
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 2px;
-    color: #303030;
     padding: 16px;
   `
 
@@ -33,7 +32,7 @@ function BlogCard({
       <section>
         <p
           dangerouslySetInnerHTML={{
-            __html: excerpt,
+            __html: excerpt
           }}
         />
       </section>

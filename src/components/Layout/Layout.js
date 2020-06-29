@@ -35,6 +35,15 @@ const Layout = ({ children }) => {
             color: white;
             font-family: Roboto, "system-ui";
           }
+
+          a {
+            box-shadow: none;
+            color: #f0cf46;
+          }
+
+          a:hover {
+            box-shadow: 0 1px 0 0 currentColor
+          }
         `}
       />
       <div css={pageStyles}>
