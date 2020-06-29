@@ -18,6 +18,7 @@ function HeaderLogo() {
     }
 
     img {
+      display: block;
       height: 50px;
       margin: 0;
     }
