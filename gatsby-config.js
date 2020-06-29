@@ -84,6 +84,14 @@ module.exports = {
           families: ['Cabin:700', 'Montserrat:600,700', 'Roboto:400']
         }
       }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
