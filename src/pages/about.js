@@ -5,7 +5,7 @@ import { Heading, Layout, SEO } from '../components'
 
 const About = () => {
   const wrapStyles = css`
-    max-width: 600px;
+    max-width: 700px;
   `
 
   return (

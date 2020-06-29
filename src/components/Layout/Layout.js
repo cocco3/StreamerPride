@@ -33,6 +33,8 @@ const Layout = ({ children }) => {
             background-color: #39318a;
             color: white;
             font-family: Roboto, 'system-ui';
+            font-size: 20px;
+            line-height: 1.8;
           }
 
           a {
