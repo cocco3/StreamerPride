@@ -8,6 +8,7 @@ import Heading from "../Heading"
 function BlogCard({
   date,
   excerpt,
+  image,
   title,
   to,
  }) {
@@ -21,6 +22,7 @@ function BlogCard({
 
   return (
     <article css={wrapStyles}>
+      {image}
       <header>
         <Heading level={3}>
           <Link to={to}>
@@ -45,6 +47,7 @@ function BlogCard({
 BlogCard.propTypes = {
   date: PropTypes.string.isRequired,
   excerpt: PropTypes.node.isRequired,
+  image: PropTypes.node,
   title: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired
 }

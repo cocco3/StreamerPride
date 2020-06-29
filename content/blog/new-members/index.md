@@ -2,6 +2,7 @@
 title: Meet The New StreamerPride Members
 date: "2020-06-23"
 description: "We spoke to over 25 amazing streamers in the process, and ultimately selected 6 incredible people to add to our ranks, for a total of 10 StreamerPride members!"
+featuredImage: ps4-yellow-scaled.jpg
 ---
 
 ## We have exciting news!

@@ -1,6 +1,7 @@
 ---
 title: Meet StreamerPride Network!
 date: "2020-05-29"
+featuredImage: controller.jpg
 ---
 
 It’s been a long journey, but here we are. Today, we proudly announce StreamerPride Network!

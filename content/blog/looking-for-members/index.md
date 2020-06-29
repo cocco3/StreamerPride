@@ -1,6 +1,7 @@
 ---
 title: We Are Looking For Members!
 date: "2020-05-27"
+featuredImage: switch-controllers.jpg
 ---
 
 Now that StreamerPride Network has taken its first public steps, we are looking for our first slate of members!

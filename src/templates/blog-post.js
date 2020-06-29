@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from 'gatsby-image'
 
 import Bio from "../components/bio"
 import { Layout, SEO } from "../components"
@@ -10,6 +11,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
+  const fluidImage = post.frontmatter.featuredImage?.childImageSharp.fluid
+  const ImageNode = fluidImage && (
+    <Img fluid={fluidImage} />
+  )
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -17,6 +23,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article>
+        {ImageNode}
         <header>
           <h1
             style={{
@@ -94,6 +101,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
