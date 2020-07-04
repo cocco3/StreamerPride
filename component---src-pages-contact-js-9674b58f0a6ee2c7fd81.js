@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"Cuy+":function(t,e,r){"use strict";r.r(e);r("q1tI");var i=r("Kvkj"),d=r("qKvR");e.default=function(){return Object(d.d)(i.d,null,Object(d.d)(i.f,{title:"Contact"}),Object(d.d)(i.b,{level:1},"Get in Touch"),Object(d.d)(i.g,{discord:"https://discord.streamerpride.network",email:"mailto:info@steamerpride.network",twitter:"https://twitter.com/StreamerPride"}))}}}]);
-//# sourceMappingURL=component---src-pages-contact-js-9674b58f0a6ee2c7fd81.js.map
