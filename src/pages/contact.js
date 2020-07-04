@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { Heading, Layout, SEO, Social } from '../components'
+import { Layout, PageHeading, SEO, Social } from '../components'
 
 const Contact = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-      <Heading level={1}>Get in Touch</Heading>
+      <PageHeading>Get in Touch</PageHeading>
 
       <Social
         discord="https://discord.streamerpride.network"

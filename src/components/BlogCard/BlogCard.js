@@ -12,10 +12,14 @@ function BlogCard({ date, excerpt, image, title, to }) {
     padding: 16px;
   `
 
+  const headerStyles = css`
+    margin: 1rem 0;
+  `
+
   return (
     <article css={wrapStyles}>
       {image}
-      <header>
+      <header css={headerStyles}>
         <Heading level={3}>
           <Link to={to}>{title}</Link>
         </Heading>

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/core'
 
-import { Heading, Layout, Member, SEO } from '../components'
+import { Heading, Layout, Member, PageHeading, SEO } from '../components'
 import membersData from '../data/members'
 import getImageFromResults from '../utils/getImageFromResults'
 
@@ -41,7 +41,7 @@ const Members = ({ data, location }) => {
   return (
     <Layout>
       <SEO title="Members" />
-      <Heading level={1}>Our Members</Heading>
+      <PageHeading>Our Members</PageHeading>
 
       <Heading level={2}>Founders</Heading>
       <div css={wrapStyles}>{FoundersNode}</div>

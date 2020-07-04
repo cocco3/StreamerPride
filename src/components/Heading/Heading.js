@@ -24,9 +24,14 @@ function Heading({ level, children }) {
     font-size: ${fontSize};
     font-weight: 700;
     line-height: 1.2;
+    margin: 0;
   `
 
-  return <ElementName css={styles}>{children}</ElementName>
+  return (
+    <ElementName css={styles}>
+      {children}
+    </ElementName>
+  )
 }
 
 export default Heading

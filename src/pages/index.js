@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/core'
 
-import { BlogCard, Heading, Hero, Layout, SEO } from '../components'
+import { BlogCard, Hero, Layout, PageHeading, SEO } from '../components'
 
 import logo from '../components/AppFooter/logo.png'
 
@@ -43,7 +43,7 @@ const BlogIndex = ({ data, location }) => {
         image={<img src={logo} alt="StreamerPride logo" aria-hidden="true" />}
         text="Standing together to support LGBTQ+ streamers worldwide"
       />
-      <Heading level={1}>What's on Deck</Heading>
+      <PageHeading>What's on Deck</PageHeading>
       <div css={wrapStyles}>{PostsNode}</div>
     </Layout>
   )

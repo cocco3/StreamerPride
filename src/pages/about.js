@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/core'
 
-import { Heading, Layout, SEO } from '../components'
+import { Layout, PageHeading, SEO } from '../components'
 
 const About = () => {
   const wrapStyles = css`
@@ -11,7 +11,7 @@ const About = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <Heading level={1}>About Us</Heading>
+      <PageHeading>About Us</PageHeading>
       <div css={wrapStyles}>
         <p>
           StreamerPride Network is a group of LGBTQ+ streamers from around the
