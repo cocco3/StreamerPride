@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
 
   const wrapStyles = css`
     display: grid;
-    grid-gap: 48px;
+    grid-gap: clamp(12px, 5vw, 48px);
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   `
 

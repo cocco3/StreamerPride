@@ -10,6 +10,12 @@ import SvgEmail from './email.inline.svg'
 import SvgTwitter from './twitter.inline.svg'
 
 function Social({ discord, email, twitter }) {
+  const gridStyles = css`
+    display: grid;
+    grid-gap: clamp(12px, 5vw, 48px);
+    grid-template-columns: repeat(auto-fit, 180px);
+  `
+
   const linkStyles = css`
     &:hover {
       box-shadow: none;
@@ -18,21 +24,14 @@ function Social({ discord, email, twitter }) {
         fill: rgba(255, 255, 255, 0.8);
       }
     }
-
-    & + a {
-      margin-left: 20px;
-    }
   `
 
   const svgStyles = css`
-    border-radius: 20px;
     fill: white;
-    padding: 20px;
-    width: 200px;
   `
 
   return (
-    <div>
+    <div css={gridStyles}>
       {discord && (
         <a
           href={discord}

@@ -43,10 +43,20 @@ const Members = ({ data, location }) => {
       <SEO title="Members" />
       <PageHeading>Our Members</PageHeading>
 
-      <Heading level={2}>Founders</Heading>
+      <div style={{ margin: '3.75rem 0 1.75rem' }}>
+        <Heading level={2}>
+          Founders
+        </Heading>
+      </div>
+
       <div css={wrapStyles}>{FoundersNode}</div>
 
-      <Heading level={2}>Members</Heading>
+      <div style={{ margin: '3.75rem 0 1.75rem' }}>
+        <Heading level={2}>
+          Members
+        </Heading>
+      </div>
+
       <div css={wrapStyles}>{MembersNode}</div>
     </Layout>
   )
