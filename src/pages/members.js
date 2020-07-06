@@ -70,7 +70,7 @@ export default MembersIndex
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(/members/)/"  }},
+      filter: { fileAbsolutePath: { regex: "/(/members/)/" } },
       sort: { fields: [frontmatter___name], order: ASC }
     ) {
       edges {
