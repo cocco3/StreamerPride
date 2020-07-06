@@ -4,39 +4,42 @@ import Img from 'gatsby-image'
 import { css } from '@emotion/core'
 
 import { Heading, Layout, Member, PageHeading, SEO } from '../components'
-import membersData from '../data/members'
-import getImageFromResults from '../utils/getImageFromResults'
 
-const Members = ({ data, location }) => {
+const MembersIndex = ({
+  data: {
+    allMarkdownRemark: { edges: membersData }
+  }
+}) => {
   const wrapStyles = css`
     display: grid;
     grid-gap: 48px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   `
 
-  const MemberNode = member => {
-    const fluidImage = getImageFromResults(data.memberImages, member.name)
-
-    const ImageNode = fluidImage && (
-      <Img fluid={fluidImage.node.childImageSharp.fluid} />
-    )
+  const MemberNode = ({ node: member }) => {
+    const fluidImage = member.frontmatter.image?.childImageSharp.fluid
+    const ImageNode = fluidImage && <Img fluid={fluidImage} />
 
     return (
       <Member
-        key={member.name}
-        description={member.description}
+        key={member.frontmatter.name}
+        description={member.html}
         image={ImageNode}
-        name={member.name}
-        pronouns={member.pronouns}
-        twitchUrl={member.twitchUrl}
-        twitterUrl={member.twitterUrl}
+        name={member.frontmatter.name}
+        pronouns={member.frontmatter.pronouns}
+        twitchUrl={member.frontmatter.twitchUrl}
+        twitterUrl={member.frontmatter.twitterUrl}
       />
     )
   }
 
-  const FoundersNode = membersData.filter(x => x.founder).map(MemberNode)
+  const FoundersNode = membersData
+    .filter(({ node: member }) => member.frontmatter.founder)
+    .map(MemberNode)
 
-  const MembersNode = membersData.filter(x => !x.founder).map(MemberNode)
+  const MembersNode = membersData
+    .filter(({ node: member }) => !member.frontmatter.founder)
+    .map(MemberNode)
 
   return (
     <Layout>
@@ -62,17 +65,33 @@ const Members = ({ data, location }) => {
   )
 }
 
-export default Members
+export default MembersIndex
 
 export const pageQuery = graphql`
   query {
-    memberImages: allFile(filter: { absolutePath: { regex: "/members/" } }) {
+    allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(/members/)/"  }},
+      sort: { fields: [frontmatter___name], order: ASC }
+    ) {
       edges {
         node {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
-              originalName
+          excerpt
+          html
+          fields {
+            slug
+          }
+          frontmatter {
+            founder
+            name
+            pronouns
+            twitchUrl
+            twitterUrl
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }

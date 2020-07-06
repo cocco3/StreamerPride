@@ -31,7 +31,7 @@ function Member({ image, name, pronouns, description, twitchUrl, twitterUrl }) {
         {pronouns}
       </div>
 
-      <div>{description}</div>
+      <div dangerouslySetInnerHTML={{ __html: description }} />
 
       {TwitterNode}
     </div>
@@ -39,7 +39,7 @@ function Member({ image, name, pronouns, description, twitchUrl, twitterUrl }) {
 }
 
 Member.propTypes = {
-  description: PropTypes.string.isRequired,
+  description: PropTypes.node.isRequired,
   image: PropTypes.node,
   name: PropTypes.string.isRequired,
   pronouns: PropTypes.string.isRequired,
