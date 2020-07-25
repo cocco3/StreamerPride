@@ -1,21 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { css } from '@emotion/core'
 
-import { BlogCard, Hero, Layout, PageHeading, SEO } from '../components'
+import {
+  BlogCard,
+  Hero,
+  ItemsGrid,
+  Layout,
+  PageHeading,
+  SEO,
+} from '../components'
 
 import logo from '../components/AppFooter/logo.png'
 
-const BlogIndex = ({ data, location }) => {
-  // const siteTitle = data.site.siteMetadata.title
+const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
-
-  const wrapStyles = css`
-    display: grid;
-    grid-gap: clamp(12px, 5vw, 48px);
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  `
 
   const PostsNode = posts.map(({ node }) => {
     const excerpt = node.frontmatter.description || node.excerpt
@@ -39,12 +38,20 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout>
       <SEO title="Home" />
+
       <Hero
         image={<img src={logo} alt="StreamerPride logo" aria-hidden="true" />}
         text="Standing together to support LGBTQ+ streamers worldwide"
       />
-      <PageHeading>What's on Deck</PageHeading>
-      <div css={wrapStyles}>{PostsNode}</div>
+
+      <PageHeading>
+        What's on Deck
+      </PageHeading>
+
+      <ItemsGrid>
+        {PostsNode}
+      </ItemsGrid>
+
     </Layout>
   )
 }
@@ -59,7 +66,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(/blog/)/" } },
+      filter: { fileAbsolutePath: { regex: "/(/blog/)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

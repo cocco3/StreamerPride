@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/core'
 
-function Heading({ image, text }) {
+function Hero({ image, text }) {
   const wrapStyles = css`
     align-items: center;
     display: flex;
@@ -28,4 +28,4 @@ function Heading({ image, text }) {
   )
 }
 
-export default Heading
+export default Hero
