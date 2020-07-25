@@ -11,34 +11,43 @@ import {
   SEO,
 } from '../components'
 
-const MembersIndex = ({
-  data: {
-    allMarkdownRemark: { edges: membersData },
-  },
-}) => {
-  const MemberNode = ({ node: member }) => {
-    const fluidImage = member.frontmatter.image?.childImageSharp.fluid
+import membersData from '../data/members'
+
+const getFluidImageFromResults = function (results, key) {
+  const foundImage = results.edges.find(x => {
+    return (
+      x.node.childImageSharp &&
+      x.node.childImageSharp.fluid.originalName.indexOf(key) > -1
+    )
+  })
+
+  return foundImage.node.childImageSharp.fluid
+}
+
+const MembersIndex = ({ data }) => {
+  const MemberNode = (member) => {
+    const fluidImage = getFluidImageFromResults(data.memberImages, member.name)
     const ImageNode = fluidImage && <Img fluid={fluidImage} />
 
     return (
       <Member
-        key={member.frontmatter.name}
-        description={member.html}
+        key={member.name}
+        description={member.description}
         image={ImageNode}
-        name={member.frontmatter.name}
-        pronouns={member.frontmatter.pronouns}
-        twitchUrl={member.frontmatter.twitchUrl}
-        twitterUrl={member.frontmatter.twitterUrl}
+        name={member.name}
+        pronouns={member.pronouns}
+        twitchUrl={member.twitchUrl}
+        twitterUrl={member.twitterUrl}
       />
     )
   }
 
   const FoundersNode = membersData
-    .filter(({ node: member }) => member.frontmatter.founder)
+    .filter(x => x.founder)
     .map(MemberNode)
 
   const MembersNode = membersData
-    .filter(({ node: member }) => !member.frontmatter.founder)
+    .filter(x => !x.founder)
     .map(MemberNode)
 
   return (
@@ -69,29 +78,13 @@ export default MembersIndex
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(/members/)/" } }
-      sort: { fields: [frontmatter___name], order: ASC }
-    ) {
+    memberImages: allFile(filter: { absolutePath: { regex: "/members/" } }) {
       edges {
         node {
-          excerpt
-          html
-          fields {
-            slug
-          }
-          frontmatter {
-            founder
-            name
-            pronouns
-            twitchUrl
-            twitterUrl
-            image {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+              originalName
             }
           }
         }
